@@ -6,5 +6,12 @@
 </head>
 <body>
     <p>Заработало!</p>
+    {% for post in posts %}
+        <div>
+            <h1>{{ post.title }}</h1>
+            <p> {{ post.text|linebreaksbr }}</p>
+            <small> {{ post.published_date }}</small>
+        </div>
+    {% endfor %}
 </body>
 </html>
